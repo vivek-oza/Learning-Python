@@ -15,3 +15,13 @@ n = int(input("Enter number : "))
 printPattern(n)
 
 
+
+### USING RECURSION :
+
+def pattern(n):
+    if n == 0:
+        return
+    print("*"*n)
+    pattern(n-1)
+
+pattern(n)

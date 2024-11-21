@@ -47,26 +47,63 @@
 
 
 
-#CORRECT CODE AND CORRECT APPROACH
+# #CORRECT CODE AND CORRECT APPROACH
 
 
-def removeWord(word_to_remove, words_list):
-    i=0
-    while i < len(words_list):
-        if words_list[i] == word_to_remove:
-            print(f"Removed word : {words_list.pop(i)}")
-        else:
-            i+=1
-    return words_list
+# def removeWord(word_to_remove, words_list):
+#     i=0
+#     while i < len(words_list):
+#         if words_list[i] == word_to_remove:
+#             print(f"Removed word : {words_list.pop(i)}")
+#         else:
+#             i+=1
+#     return words_list
 
 
 
-words_list = ["Hey", "this", "is", "vivek", "and", "I", "am", "am", "fine"]
-print(f"Original list: {words_list}")
+# words_list = ["Hey", "this", "is", "vivek", "and", "I", "am", "am", "fine"]
+# print(f"Original list: {words_list}")
 
-# Input word to remove
-word_to_remove = input("Enter word to remove: ").strip().lower()
+# # Input word to remove
+# word_to_remove = input("Enter word to remove: ").strip().lower()
 
-updated_list=removeWord(word_to_remove, words_list)
+# updated_list=removeWord(word_to_remove, words_list)
 
-print(f"Updated list: {updated_list}")
+# print(f"Updated list: {updated_list}")
+
+
+
+
+
+
+#EVERY OTHER CODE WAS WRONG HAHAH., HERES THE SMART AND CORRECT APPROACH
+
+
+##code 1
+
+
+# def removeWord(l, word):
+#         l.remove(word)
+#         return l 
+
+
+# l= ["Vivek","Saurav","Gaurav","Kisnav","av"]
+
+# print(removeWord(l, "av"))
+
+
+
+
+##code 2
+
+def removeWord(l, word):
+        n=[]
+        for item in l:
+            if not(item==word):
+                  n.append(item.strip(word))
+        return n 
+
+
+l= ["Vivek","Saurav","Gaurav","Kisnav","av"]
+
+print(removeWord(l, "av"))
