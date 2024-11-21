@@ -11,7 +11,7 @@ l1 = [13,45,12,9,4,11,9,6,5]
 
 l1.sort()
 l1.sort(reverse=True)
-l1.reverse()
+l1.reverse() #this is different from "sort(reverse=True)"
 l1.insert(1,9999) #insert 9999 in list l1, such that its index become 1 in list l1
 l1.pop(3)
 l1.remove(9) #remove first occurence
